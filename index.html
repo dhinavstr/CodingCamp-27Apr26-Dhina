@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense &amp; Budget Visualizer</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- 2.1: Header with app title and total balance -->
+    <header>
+      <h1>Expense &amp; Budget Visualizer</h1>
+      <div id="total-balance">Total: $0.00</div>
+    </header>
+
+    <main>
+      <!-- 2.2: Form section -->
+      <section id="form-section">
+        <form id="transaction-form">
+          <input id="item-name" type="text" placeholder="Item name" />
+          <input id="item-amount" type="number" placeholder="Amount" />
+          <select id="item-category">
+            <option value="">Select category</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Fun">Fun</option>
+          </select>
+          <button type="submit">Add Transaction</button>
+          <div id="form-errors" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <!-- 2.3: Transaction list section -->
+      <section id="list-section">
+        <h2>Transactions</h2>
+        <ul id="transaction-list"></ul>
+      </section>
+
+      <!-- 2.4: Chart section -->
+      <section id="chart-section">
+        <h2>Spending by Category</h2>
+        <canvas id="pie-chart" width="300" height="300"></canvas>
+        <p id="chart-empty-msg" hidden>No transactions yet.</p>
+      </section>
+    </main>
+
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
